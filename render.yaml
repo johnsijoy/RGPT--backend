@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: rgpt-backend
+    env: python
+    buildCommand: bash render-build.sh
+    startCommand: gunicorn realestate.wsgi:application
+    envVars:
+      - key: DJANGO_SECRET_KEY
+        value: "django-insecure-7al8tcgd+aduhtb*3&sfp_n5gy)21zh4&4agx3-hf5939p+8eu"
+      - key: DEBUG
+        value: "True"
+      - key: DB_NAME
+        value: "realestate_db"
+      - key: DB_USER
+        value: "Joy"
+      - key: DB_PASSWORD
+        value: "realestate"
+      - key: DB_HOST
+        value: "127.0.0.1"
+      - key: DB_PORT
+        value: "3307"
+      - key: ALLOWED_HOSTS
+        value: "rgpt-frontend.vercel.app"
