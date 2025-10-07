@@ -179,6 +179,6 @@ SIMPLE_JWT = {
 
 ALLOWED_HOSTS = ["127.0.0.1", "localhost"]
 
-CORS_ALLOW_ALL_ORIGINS = True  # Development only
+CORS_ALLOW_ALL_ORIGINS = "https://rgpt-frontend.vercel.app" # Development only
 # OR, for stricter control:
-CORS_ALLOWED_ORIGINS = ["http://localhost:3000"]
+CORS_ALLOWED_ORIGINS = ["https://rgpt-frontend.vercel.app"]
